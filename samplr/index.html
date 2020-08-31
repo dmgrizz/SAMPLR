@@ -70,12 +70,51 @@
                   <div class="col-2 top-left-col bg-light ">
                       <a href="#!" class="btn btn-dark btn-sm active col-button" role="button" aria-pressed="true">Samples</a>
                       <a href="#!" class="btn btn-light btn-sm active col-button" role="button" aria-pressed="true">Presets</a>
-                       <a href="#!" class="btn btn-light btn-sm active col-button" role="button" aria-pressed="true">Most Popular</a>
+                      <div class="dropdown">
+                        <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Popular
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Recent</a>
+                          <a class="dropdown-item" href="#">Relevant</a>
+
+                        </div>
+                    </div>
                   </div>
 
-                  <div class="col-lg-10 top-right-col">RT side
+                  <div class="dropdown">
+                    <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Loops & One Shots
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Loops</a>
+                      <a class="dropdown-item" href="#">One Shots</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                  <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    BPM
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="tab-content">
+                      <a class="dropdown-item active" href="#">BPM Range</a>  <!-- make these tab panels and make text boxes to type bpm numbers in  -->
+                      <div class="dropdown-divider"></div>
+                        <input type="range" class="form-control-range">
+                      <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Exact BPM</a>
+                      </div>
+                    </div>
 
-                  </div>
+                  <div class="dropdown">
+                    <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Key
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Sharp Keys</a>
+                      <a class="dropdown-item" href="#">Flat Keys</a>
+                    </div>
+                </div>
+              </div>
                </div>
 
               <div class="top-info">

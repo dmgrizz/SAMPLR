@@ -2,6 +2,7 @@
 /*NAV AREA*/
 body {
     font-family: 'Montserrat', sans-serif;
+
 }
 .navbar {
      padding: 1rem 0 1rem;
@@ -20,7 +21,10 @@ body {
       padding: 2% 15%;
 }
 #nav {
-    background-color: #393b44;
+    /* background-color: #393b44; */
+    /* background-color: #584b4f; */
+    /* background-color: #574c4f; */
+    background-color: #343233;
 }
 .form-row  {
     position: absolute;
@@ -42,8 +46,13 @@ body {
 
 #top-container {
       font-family: 'Montserrat', sans-serif;
-      font-wieght:400;
+      font-weight:400;
      color: #393b44;
+
+}
+#dropdownMenuButton {
+  margin: 2px;
+
 }
 
 .sample-search {
@@ -89,6 +98,7 @@ h6 {
 
 .top-left-col {
     background-color: #ebecf1;
+
 }
 
 .top-right-col {
