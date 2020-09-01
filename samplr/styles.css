@@ -54,6 +54,9 @@ h6 {
 #dropdownMenuButton {
     margin: 2px;
 }
+#dropdownMenuButton2 {
+    margin: 2px;
+}
 .btn-drop {
   /* float:right; */
   text-align: center;
@@ -90,21 +93,16 @@ h6 {
     margin:3% 0;
 }
 
-#inputBPM{
-
+/* #inputBPM{
   width:20%;
-
-
-}
+} */
 
 
 .bpm-button {
   border-radius: 100%;
 
 }
-.bpm-group {
-  width: 100%;
-}
+
 #bpmrange {
   width:95%;
   margin-left: 2%;
@@ -137,6 +135,7 @@ h6 {
 
 
 
+
 /* TABLE AREA */
 .form {
     display:inline-block;
@@ -154,6 +153,26 @@ h6 {
     margin-top:-5px;
     margin-bottom:-7px;
 }
+/* button {
+    outline: none !important;
+} */
+ /* button.btn:focus .btn:active {
+   outline: none !important;
+   box-shadow: none;
+} */
+.btn-play{
+  outline: none !important;
+  box-shadow: none;
+  margin: 0 0 -1px 0;
+  border-radius: 100%;
+  padding: 0 0 0 0;
+  border-width: 0;
+
+}
+button.btn:hover{
+  color: red;
+}
+
 
 
 @media (min-width: 600px) {
@@ -173,13 +192,11 @@ h6 {
 @media (max-width:600px) {
     .form-row-collapse {
         width:40%;
-
-      /*display:none;*/
     }
-    .form-button-collapse {
+    /* .form-button-collapse {
 
-    }
-    .form-row {
+    } */
+    #top-form {
        display:none;
     }
 }

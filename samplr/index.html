@@ -4,12 +4,14 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>samplr</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Bootstrap CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title>samplr</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -21,7 +23,7 @@
       <div class="container-fluid">
           <nav class="navbar navbar-expand-lg navbar-dark">
               <a id="samplr" class="navbar-brand" href="">samplr</a>
-                <form class="form-row">
+                <form id="top-form" class="form-row">
                     <input class="form-input .col-auto form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="form-button btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
@@ -117,16 +119,32 @@
                   </div>
                 </div>
 <!-- drop down menu KEYS & Instruements -->
-                  <div class="dropdown btn-drop">
-                    <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="btn-drop">
+                    <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Key
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <div class="tab-content">
-                        <a class="dropdown-item" href="#">Sharp Keys</a>
-                        <a class="dropdown-item" href="#">Flat Keys</a>
-                      </div>
+                      <ul class="nav nav-tabs tabs2" id="myTab2" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active dropdown-item" id="sharp-tab" data-toggle="tab" href="#sharp"
+                          role="tab" aria-controls="sharp" aria-selected="true">Sharp</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link dropdown-item" id="major-tab" data-toggle="tab" href="#major"
+                          role="tab" aria-controls="major" aria-selected="false">Major</a>
+                        </li>
+                      </ul>
+                      <div class="dropdown-divider"></div>
+                      <div class="tab-content" id="myTabContent2">
+                        <div class="tab-pane fade show active" id="sharp" role="tabpanel" aria-labelledby="sharp-tab">
+                          <p>SHARP KEYS</p>
+                        </div>
 
+                        <div class="tab-pane fade" id="major" role="tabpanel" aria-labelledby="major-tab">
+                          <p>MAJOR KEYS</p>
+
+                        </div>
+                      </div>
                     </div>
                 </div>
 
@@ -147,6 +165,7 @@
                       <tr>
                           <th></th>
                           <th>Pack</th>
+                          <th></th>
                           <th>Time</th>
                           <th>File Name</th>
                           <th>Key</th>
@@ -157,6 +176,7 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
+                          <td><button class="btn btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
                           <td>0:07</td>
                           <td>FAT_808.wav</td>
                           <td>C</td>
@@ -165,6 +185,7 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img  src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
+                          <td><button class="btn btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
                           <td>0:04</td>
                           <td>chill_808_2.wav</td>
                           <td>F</td>
@@ -173,6 +194,7 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
+                          <td><button class="btn btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
                           <td>0:07</td>
                           <td>FAT_808.wav</td>
                           <td>C</td>
@@ -181,6 +203,7 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img  src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
+                          <td><button class="btn btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
                           <td>0:04</td>
                           <td>chill_808_2.wav</td>
                           <td>F</td>
@@ -215,15 +238,34 @@
             event.stopPropagation();
         });
 
+        // Closes the menu in the event of outside click
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-item')) {
 
+                var dropdowns =
+                document.getElementsByClassName("dropdown-menu");
 
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
+        document.getElementById("myTab2").addEventListener('click', function (event) {
+            // alert("click outside");
+            event.stopPropagation();
+        });
 
         // Closes the menu in the event of outside click
         window.onclick = function(event) {
             if (!event.target.matches('.dropdown-item')) {
 
                 var dropdowns =
-                document.getElementsByClassName("dropdownmenu");
+                document.getElementsByClassName("dropdown-menu");
 
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
