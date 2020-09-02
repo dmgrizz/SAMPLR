@@ -160,18 +160,71 @@ h6 {
    outline: none !important;
    box-shadow: none;
 } */
-.btn-play{
-  outline: none !important;
+button.btn-play{
+
+  border: none;
   box-shadow: none;
-  margin: 0 0 -1px 0;
+  margin: 0 0 0 0;
   border-radius: 100%;
   padding: 0 0 0 0;
-  border-width: 0;
+  box-shadow: 0px 0px 0px ;
 
 }
-button.btn:hover{
-  color: red;
+
+button.btn-play:focus {
+  outline:0;
 }
+
+button.btn-play:hover{
+  color: red;
+  cursor:pointer;
+
+}
+.btn-notes {
+  border: 0.1875em solid #0F1C3F;
+  border-radius:100%;
+  border-color: #f6f6f6;
+  padding:1%;
+  min-width: 3rem;
+
+  background-color: #fff;
+
+}
+
+.btn-notes:focus {
+  outline:0;
+}
+
+.btn-notes:hover{
+  cursor:pointer;
+}
+.btn-notes.selected {
+  color: #fff;
+  background-color: #fa1616;
+  /* border-color: #f6f6f6 ; */
+}
+.tab-content {
+  text-align: center;
+}
+.root-note{
+  font-weight:  600;
+  color: gray;
+  margin-bottom: 0;
+}
+.inst-row {
+  max-width: 280px;
+  text-align: left;
+}
+
+.inst-col {
+  float: left;
+}
+
+button.btn-inst:hover {
+  background-color: #eeeeee;
+  color: #0f4c75;
+}
+
 
 
 

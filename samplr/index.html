@@ -113,7 +113,7 @@
                           <p>Enter BPM</p>
                           <input id="bpm-text2" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                         </div>
-                      </div>
+                    </div>
                         <div class="dropdown-divider"></div>
                       <button class="btn btn-primary btn-block bpm-button" role="button"> Update </button>
                   </div>
@@ -127,26 +127,88 @@
                       <ul class="nav nav-tabs tabs2" id="myTab2" role="tablist">
                         <li class="nav-item" role="presentation">
                           <a class="nav-link active dropdown-item" id="sharp-tab" data-toggle="tab" href="#sharp"
-                          role="tab" aria-controls="sharp" aria-selected="true">Sharp</a>
+                          role="tab" aria-controls="sharp" aria-selected="true">Flat</a>
                         </li>
                         <li class="nav-item" role="presentation">
                           <a class="nav-link dropdown-item" id="major-tab" data-toggle="tab" href="#major"
-                          role="tab" aria-controls="major" aria-selected="false">Major</a>
+                          role="tab" aria-controls="major" aria-selected="false">Sharp</a>
                         </li>
                       </ul>
                       <div class="dropdown-divider"></div>
                       <div class="tab-content" id="myTabContent2">
+                        <h6 class="root-note">ROOT NOTE</h6>
+                        <div class="dropdown-divider"></div>
                         <div class="tab-pane fade show active" id="sharp" role="tabpanel" aria-labelledby="sharp-tab">
-                          <p>SHARP KEYS</p>
+                          <button class="btn-notes" type="button" name="button">Db</button>
+                          <button class="btn-notes" type="button" name="button">Eb</button>
+                          <button class="btn-notes" type="button" name="button">Gb</button>
+                          <button class="btn-notes" type="button" name="button">Ab</button>
+                          <button class="btn-notes" type="button" name="button">Bb</button>
+                          <button class="btn-notes" type="button" name="button">C</button>
+                          <button class="btn-notes" type="button" name="button">D</button>
+                          <button class="btn-notes" type="button" name="button">E</button>
+                          <button class="btn-notes" type="button" name="button">F</button>
+                          <button class="btn-notes" type="button" name="button">G</button>
+                          <button class="btn-notes" type="button" name="button">A</button>
+                          <button class="btn-notes" type="button" name="button">B</button>
                         </div>
 
                         <div class="tab-pane fade" id="major" role="tabpanel" aria-labelledby="major-tab">
-                          <p>MAJOR KEYS</p>
+                          <button class="btn-notes" type="button" name="button">C#</button>
+                          <button class="btn-notes" type="button" name="button">D#</button>
+                          <button class="btn-notes" type="button" name="button">F#</button>
+                          <button class="btn-notes" type="button" name="button">G#</button>
+                          <button class="btn-notes" type="button" name="button">A#</button>
+                          <button class="btn-notes" type="button" name="button">C</button>
+                          <button class="btn-notes" type="button" name="button">D</button>
+                          <button class="btn-notes" type="button" name="button">E</button>
+                          <button class="btn-notes" type="button" name="button">F</button>
+                          <button class="btn-notes" type="button" name="button">G</button>
+                          <button class="btn-notes" type="button" name="button">A</button>
+                          <button class="btn-notes" type="button" name="button">B</button>
 
                         </div>
                       </div>
                     </div>
                 </div>
+                <div class="btn-drop">
+                  <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Instruments
+                  </button>
+
+                    <div class="dropdown-menu row inst-row" aria-labelledby="dropdownMenuButton">
+                      <div class="inst-col col-5">
+                        <h6><button class="btn btn-white btn-inst" name="button">Bass</button></h6>
+                        <h6><button class="btn btn-white btn-inst" name="button">Drums</button></h6>
+                        <h6><button class="btn btn-white btn-inst" name="button">Percussion</button></h6>
+                        <h6><button class="btn btn-white btn-inst" name="button">Strings</button></h6>
+                        <h6><button class="btn btn-white btn-inst" name="button">Guitar</button></h6>
+                      </div>
+
+                      <div class="inst-col col-5">
+                        <h6><button class="btn btn-white btn-inst" name="button">Synths</button></h6>
+                        <h6><button class="btn btn-white btn-inst" name="button">Pads</button></h6>
+                        <h6><button class="btn btn-white btn-inst" name="button">FX</button></h6>
+                        <h6><button class="btn btn-white btn-inst" name="button">Vocals</button></h6>
+                        <h6><button class="btn btn-white btn-inst" name="button">Brass & Woodlands</button></h6>
+                      </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                  </div>
+
+
+
+
+
+
 
             </div> <!-- end of row -->
 
@@ -157,6 +219,7 @@
                   <form class="form">
                       <input class="sample-search form-control form-control-sm" type="text" placeholder="search">
                   </form>
+
               </div>
 
 
@@ -176,7 +239,7 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
-                          <td><button class="btn btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
+                          <td><button class="btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
                           <td>0:07</td>
                           <td>FAT_808.wav</td>
                           <td>C</td>
@@ -185,7 +248,7 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img  src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
-                          <td><button class="btn btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
+                          <td><button class="btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
                           <td>0:04</td>
                           <td>chill_808_2.wav</td>
                           <td>F</td>
@@ -194,7 +257,7 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
-                          <td><button class="btn btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
+                          <td><button class="btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
                           <td>0:07</td>
                           <td>FAT_808.wav</td>
                           <td>C</td>
@@ -203,7 +266,7 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img  src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
-                          <td><button class="btn btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
+                          <td><button class="btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
                           <td>0:04</td>
                           <td>chill_808_2.wav</td>
                           <td>F</td>
@@ -226,6 +289,10 @@
         // function btnToggle() {
         //     document.getElementById("dropdownMenuButton").classList.toggle("show");
         // }
+        $('.btn-notes').on('click', function(){
+            $('.btn-notes').removeClass('selected');
+            $(this).addClass('selected');
+        });
 
         $(document).ready(function(){   //this makes it so i could make the tabbing back and forth work again added this last
           $(".nav-tabs a").click(function(){
@@ -243,7 +310,7 @@
             if (!event.target.matches('.dropdown-item')) {
 
                 var dropdowns =
-                document.getElementsByClassName("dropdown-menu");
+                document.getElementsByClassName("dropdownmenu");
 
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
@@ -262,10 +329,10 @@
 
         // Closes the menu in the event of outside click
         window.onclick = function(event) {
-            if (!event.target.matches('.dropdown-item')) {
+            if (!event.target.matches('.tab-content')) {
 
                 var dropdowns =
-                document.getElementsByClassName("dropdown-menu");
+                document.getElementsByClassName("dropdownmenu");
 
                 var i;
                 for (i = 0; i < dropdowns.length; i++) {
