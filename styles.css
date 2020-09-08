@@ -154,8 +154,10 @@ h6 {
 }
 
 .pack-image{
-    width:8%;
+    min-width: 30px;
+    width:50px;
     height:20%;
+
     margin-top:-5px;
     margin-bottom:-7px;
 }
@@ -181,8 +183,8 @@ button.btn-play:focus {
   outline:0;
 }
 
-button.btn-play:hover{
-  color: red;
+.btn-play:hover{
+  background-image: url("play-circle-regular.svg");
   cursor:pointer;
 
 }
@@ -250,18 +252,50 @@ button.btn-inst:hover {
 #xrange{
     position:absolute;
     left:650px;
-    top:1280px;
+    top:1320px;
 }
 #xoffset{
     position:absolute;
     left:800px;
-    top:1280px;
+    top:1320px;
 }
 #collapse-btn {
   position: absolute;
   right:0;
 }
+.a {
+  background-image: url("play-circle-solid.svg");
+  height:35px;
+  width:35px;
+  background-repeat:no-repeat;
 
+}
+p.btn-text {
+  display:none;
+}
+.b {
+  background-image: url("play-circle-solid.svg");
+  height:35px;
+  width:35px;
+  background-repeat:no-repeat;
+}
+
+.c {
+  background-image: url("play-circle-solid.svg");
+  height:35px;
+  width:35px;
+  background-repeat:no-repeat;
+}
+.d {
+  background-image: url("play-circle-solid.svg");
+  height:35px;
+  width:35px;
+  background-repeat:no-repeat;
+}
+
+#waveform {
+  background: rgba(0,0,0,0.8);
+}
 
 @media (min-width: 600px) {
         .form-row-collapse {

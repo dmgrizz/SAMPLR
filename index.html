@@ -13,11 +13,14 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://g200kg.github.io/webaudio-controls/webaudio-controls.js" ></script><script src="webaudio-pianoroll.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
+
   </head>
   <body>
 
@@ -218,6 +221,7 @@
                           <th></th>
                           <th>Pack</th>
                           <th></th>
+                          <th></th>
                           <th>Time</th>
                           <th>File Name</th>
                           <th>Key</th>
@@ -228,40 +232,43 @@
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
-                          <td><button class="btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
+                          <td> <div id="waveform"> </div> </td>
+                          <td><button class="a btn-play" role="button"><p class="btn-text">a</p></button></td>
                           <td>0:07</td>
-                          <td>FAT_808.wav</td>
+                          <td>growl_one_shot_04_.wav</td>
                           <td>C</td>
                           <td>142</td>
                       </tr>
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img  src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
-                          <td><button class="btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
+                          <td><button class="b btn-play" role="button"><p class="btn-text">b</p></button></td>
                           <td>0:04</td>
-                          <td>chill_808_2.wav</td>
+                          <td>FAT_808_2.wav</td>
                           <td>F</td>
                           <td>132</td>
                           <!-- <td> <a href="sounds/CLF_85_Drums_Golden.wav" download> <button type="button" name="button">download</button> </a> </td>
                           <td><audio class="js-player" id="plyr-1" crossorigin playsinline>
                             						<source src="sounds/CLF_85_Drums_Golden.wav" type="audio/wav">
-                            					</audio></td> -->
+<span class="fas fa-play-circle fa-2x"></span>
+                                      </audio></td> -->
+
                       </tr>
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
-                          <td><button class="btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
+                          <td><button class="c btn-play" role="button"><p class="btn-text">c</p></button></td>
                           <td>0:07</td>
-                          <td>FAT_808.wav</td>
+                          <td>Closed_HH_trap.wav</td>
                           <td>C</td>
                           <td>142</td>
                       </tr>
                       <tr>
                           <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input"></th>
                           <td><img  src="https://i1.sndcdn.com/avatars-000247750402-qlz4k6-t200x200.jpg" class="img-fluid pack-image" alt="Pack image"></td>
-                          <td><button class="btn-play" role="button"> <span class="fas fa-play-circle fa-2x"></span> </button></td>
+                          <td><button class="d btn-play" role="button"><p class="btn-text">d</p></button></td>
                           <td>0:04</td>
-                          <td>chill_808_2.wav</td>
+                          <td>CLF_Drum_loop.wav</td>
                           <td>F</td>
                           <td>132</td>
                       </tr>
@@ -273,12 +280,13 @@
       </div>
 
   </section>
+
   <section>
     <button id="collapse-btn" type="button" class="collapsible">Piano Roll</button>
   <div class="content">
 
-    <div class="piano-roll">
-      <webaudio-pianoroll  width="800" height="400" xrange="64" markend="64"  editmode="dragmono"></webaudio-pianoroll>
+    <div id="base" class="piano-roll">
+      <webaudio-pianoroll id="proll"  width="800" height="400" xrange="64" markend="64"  editmode="dragmono"></webaudio-pianoroll>
 <!-- collt="#33f" coldk="#338" width="600" height="400"-->
       <webaudio-slider oninput="Layout(this)" id="xrange" direction="horz" width="120" height="24" min="1" max="10" value="1"></webaudio-slider>
       <webaudio-slider oninput="Layout(this)" id="xoffset" direction="horz" width="200" height="24" min="0" max="20" step="0.01" value="0"></webaudio-slider>
@@ -301,89 +309,62 @@
 
   </section>
 
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="https://g200kg.github.io/webaudio-controls/webaudio-controls.js" ></script><script src="webaudio-pianoroll.js"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript">
+    var playButton = document.querySelectorAll(".btn-play").length;
+
+    for(var i = 0; i < playButton; i++) {
+
+      document.querySelectorAll(".btn-play")[i].addEventListener("click", function() {
+
+        var playButtonInnerHtml = this.textContent;
+        // var playButtonSound = this.length
+
+        switch (playButtonInnerHtml) {
+
+          case "a":
+            var bassGrowl = new Audio("sounds/RICKYXSAN_growl_one_shot_04_E.wav");
+            bassGrowl.play();
+            break;
+
+          case "b":
+            var uz808 = new Audio("sounds/UZ_808_qx_04_F.wav");
+            uz808.play();
+              break;
+          case "c":
+            var clHH = new Audio("sounds/CLF_ClosedHH_Trap.wav");
+            clHH.play();
+            break;
+          case "d":
+            var drumloop = new Audio("sounds/CLF_85_Drums_Golden.wav");
+            drumloop.play();
+            break;
 
 
-  <script>
 
+          default: console.log(playButtonInnerHtml);
 
-
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
-        // JavaScript code to avoid dropdown
-        // menu close
-
-        // Clicking dropdown button will toggle display
-        // function btnToggle() {
-        //     document.getElementById("dropdownMenuButton").classList.toggle("show");
-        // }
-        $('.btn-notes').on('click', function(){
-            $('.btn-notes').removeClass('selected');
-            $(this).addClass('selected');
-        });
-
-        $(document).ready(function(){   //this makes it so i could make the tabbing back and forth work again added this last
-          $(".nav-tabs a").click(function(){
-            $(this).tab('show');
-          });
-        });
-        // Prevents menu from closing when clicked inside
-        document.getElementById("myTab").addEventListener('click', function (event) {
-            // alert("click outside");
-            event.stopPropagation();
-        });
-
-        // Closes the menu in the event of outside click
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropdown-item')) {
-
-                var dropdowns =
-                document.getElementsByClassName("dropdownmenu");
-
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
         }
 
-        document.getElementById("myTab2").addEventListener('click', function (event) {
-            // alert("click outside");
-            event.stopPropagation();
-        });
+      });
 
-        // Closes the menu in the event of outside click
-        window.onclick = function(event) {
-            if (!event.target.matches('.tab-content')) {
 
-                var dropdowns =
-                document.getElementsByClassName("dropdownmenu");
+    }
+    var wavesurfer = WaveSurfer.create({
+    container: '#waveform',
+    waveColor: '#D2EDD4',
+    progressColor: '#46B54D',
+    minPxPerSec: 1,
+    regionsMinLength: 10
+});
 
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap.min.js" type="text/javascript"></script> -->
+wavesurfer.load('sounds/CLF_85_Drums_Golden.wav');
+
+
+   // wavesurfer.drawBuffer();
+
+  </script>
   </body>
 </html>
