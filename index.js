@@ -50,9 +50,18 @@ function Layout(k){
 //   }
 // });
 // }
-$("#collapse-btn").on("click", function() {
-  $("#base").slideToggle();
-});
+
+  $(document).ready(function(){   //this makes it so i could make the tabbing back and forth work again added this last
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+    });
+  });
+
+
+
+  $("#collapse-btn").on("click", function() {
+    $("#base").slideToggle();
+  });
     // JavaScript code to avoid dropdown
     // menu close
 
@@ -65,11 +74,7 @@ $("#collapse-btn").on("click", function() {
         $(this).addClass('selected');
     });
 
-    $(document).ready(function(){   //this makes it so i could make the tabbing back and forth work again added this last
-      $(".nav-tabs a").click(function(){
-        $(this).tab('show');
-      });
-    });
+
     // Prevents menu from closing when clicked inside
     document.getElementById("myTab").addEventListener('click', function (event) {
         // alert("click outside");
