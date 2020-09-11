@@ -257,23 +257,26 @@ button.btn-inst:hover {
 .wave-container {
   width:200px;
   text-align: center;
+  vertical-align: middle;
   /* display: inline-block; */
 }
 .row-pack-img {
   max-height: 70px;
   max-width: 30px;
+  margin-top: 5px;
 }
 
 .play-btn {
   background: url("play-circle-solid.svg");
   position: relative;
-  top: 10px;
+  top: 14px;
   height:52px;
   width:52px;
   float:right;
   cursor: pointer;
   background-repeat: no-repeat;
   border: none;
+
 }
 
 .play-btn:hover{
@@ -284,27 +287,44 @@ button.btn-inst:hover {
 .play-btn:focus {
   outline: 0;
 }
+.pack-text {
+  position: relative;
+  left:25px;
+}
 
 .check-box{
   position: relative;
-  left:40px;
-  top: 50px;
+  top:5px;
+  margin-right: 10px;
 }
 .dl-btn {
   cursor: pointer;
   border: none;
+  margin-top: 5px;
 }
 
+button.dl-btn {
+  background-color: transparent;
+}
+
+.pad-mid-text {
+  padding-top:10px;
+}
+
+.row-info:hover {
+  background-color: #f4f4f4;
+}
 
 .header-audio{
   /* padding-left:5%; */
-
-
 }
 .header-titles{
-  background-color: #322f3d;
+  background-color: #212529;
   color: white;
   padding: 1% 1%;
+}
+.header-text {
+  margin-top: 10px;
 }
 .body-audio {
   /* padding-left: 5%; */
@@ -314,6 +334,9 @@ button.btn-inst:hover {
 @media (min-width: 600px) {
         .form-row-collapse {
         display: none;
+    }
+    .pad-mid-text{
+      word-wrap: break-word;
     }
 }
 
@@ -329,9 +352,13 @@ button.btn-inst:hover {
     .form-row-collapse {
         width:40%;
     }
-    /* .form-button-collapse {
+    .pad-mid-text{
+      word-wrap: break-word;
+    }
+  /* .col-3 {
+    width: 100%;
+  } */
 
-    } */
     #top-form {
        display:none;
     }
