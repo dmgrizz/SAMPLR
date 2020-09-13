@@ -70,7 +70,7 @@ actx=new AudioContext();
 osc=actx.createOscillator();
 gain=actx.createGain();
 gain.gain.value=0;
-osc.type="sawtooth";
+osc.type="sine";
 osc.start();
 osc.connect(gain).connect(actx.destination);
 
@@ -79,9 +79,12 @@ function Callback(ev){
     gain.gain.setTargetAtTime(0.5,ev.t,0.005);
     gain.gain.setTargetAtTime(0,ev.g,0.1);
 }
+
+
 function Play(){
     actx.resume();
     document.getElementById("proll").play(actx,Callback);
+    // document.getElementById("proll").play(actx,Callback);
 }
 function Layout(k){
     switch(k.id){
