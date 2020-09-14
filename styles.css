@@ -299,6 +299,14 @@ button.btn-inst:hover {
   border: none;
   margin-top: 5px;
 }
+.fv-btn {
+  cursor: pointer;
+  border: none;
+  margin-top: 5px;
+}
+button.fv-btn {
+  background-color: transparent;
+}
 
 button.dl-btn {
   background-color: transparent;
@@ -353,14 +361,25 @@ button.dl-btn {
     }
 
 }
-@media (max-width:600px) {
+@media (max-width:576px) {
     .form-row-collapse {
         width:40%;
     }
+    .play-btn {
+      float: right;
+
+    }
+  .dl-btn {
+    display: none;
+  }
+
+
+
 }
 @media (min-width: 770px) {
   .pad-mid-text2 {
     display: none;
+
   }
 
   .pack-text{
@@ -368,6 +387,7 @@ button.dl-btn {
     left: 10px;
 
   }
+
 }
 @media (min-width: 700px) and (max-width:950px) {
   .pad-mid-text {
@@ -395,7 +415,6 @@ button.dl-btn {
     word-wrap: break-word;
   }
   .pack-text {
-    color:red;
     position: relative;
     left:10px;
 
