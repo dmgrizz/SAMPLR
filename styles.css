@@ -297,12 +297,38 @@ button.btn-inst:hover {
 .dl-btn {
   cursor: pointer;
   border: none;
-  margin-top: 5px;
+  position: relative;
+  top:5px;
+
+
 }
 .fv-btn {
   cursor: pointer;
   border: none;
-  margin-top: 5px;
+  position: relative;
+  top:5px;
+}
+.heart {
+  background-image: url("images/heart-regular.svg");
+  /* background-image: url('https://api.iconify.design/dashicons:heart.svg') */
+  /* font-size: .5rem; */
+  /* background-color: red; */
+  background-repeat: no-repeat;
+}
+.favorite {
+  background-image: url("images/heart-solid.svg");
+  /* background-image: url('https://api.iconify.design/dashicons:heart.svg'); */
+  font-size: .5rem;
+  background-repeat: no-repeat;
+  /* font-size: .875em; */
+
+}
+
+.side-btns {
+  display: flex;
+  flex-direction: row;
+    margin:0;
+
 }
 button.fv-btn {
   background-color: transparent;
@@ -310,6 +336,9 @@ button.fv-btn {
 
 button.dl-btn {
   background-color: transparent;
+}
+.dl-btn:focus, .fv-btn:focus {
+  outline: 0;
 }
 
 .pad-mid-text {
@@ -344,6 +373,7 @@ button.dl-btn {
     }
     .pad-mid-text{
       word-wrap: break-word;
+      font-size: 13px;
     }
 }
 
@@ -359,6 +389,7 @@ button.dl-btn {
       top: 35px;
       /* display: none; */
     }
+
 
 }
 @media (max-width:576px) {
