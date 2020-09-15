@@ -303,25 +303,30 @@ button.btn-inst:hover {
 
 }
 .fv-btn {
+  background-image: url("images/heart-regular.svg");
   cursor: pointer;
   border: none;
   position: relative;
-  top:5px;
-}
-.heart {
-  background-image: url("images/heart-regular.svg");
-  /* background-image: url('https://api.iconify.design/dashicons:heart.svg') */
-  /* font-size: .5rem; */
-  /* background-color: red; */
+  top:25px;
   background-repeat: no-repeat;
+  min-height:36px;
+  min-width:36px;
 }
+
 .favorite {
   background-image: url("images/heart-solid.svg");
-  /* background-image: url('https://api.iconify.design/dashicons:heart.svg'); */
-  font-size: .5rem;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  top:25px;
   background-repeat: no-repeat;
-  /* font-size: .875em; */
+  min-height:36px;
+  min-width:36px;
+  background-color: transparent;
 
+}
+.favorite:focus{
+  outline: 0;
 }
 
 .side-btns {
@@ -337,6 +342,7 @@ button.fv-btn {
 button.dl-btn {
   background-color: transparent;
 }
+
 .dl-btn:focus, .fv-btn:focus {
   outline: 0;
 }
@@ -366,6 +372,59 @@ button.dl-btn {
   /* padding-left: 5%; */
   width: 100%;
 }
+
+url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+ body {
+     font-family: 'Roboto', sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+}
+ ul {
+     list-style: none;
+     display: flex;
+}
+ ul .key {
+     position: relative;
+     width: 60px;
+     height: 180px;
+     border: 1px solid black;
+     border-right: none;
+     background: #fffff0;
+     border-radius: 5px;
+     box-shadow: 0px 3px 5px #666;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     padding-bottom: 10px;
+     font-weight: bold;
+}
+ ul .key:last-child {
+     border-right: 1px solid black;
+}
+ ul .black-key {
+     position: absolute;
+     top: -1px;
+     left: 37.5px;
+     width: 45px;
+     height: 120px;
+     background: black;
+     border-radius: 5px;
+     box-shadow: 0px 3px 5px #666;
+     z-index: 999;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+     padding-bottom: 10px;
+     color: white;
+}
+ ul .active {
+     box-shadow: 0px 1px 3px #666;
+}
+
+
 
 @media (min-width: 600px) {
       .form-row-collapse {
