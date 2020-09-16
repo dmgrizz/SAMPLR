@@ -34,7 +34,8 @@ h6 {
 }
 
 #nav {
-    background-color: #343233;
+    /* background-color: #343233; */
+    background-color: #131313;
 }
 
 .form-row  {
@@ -48,7 +49,7 @@ h6 {
 }
 
 #nav .container-fluid {
-    padding: 1% 5% ;
+    padding: .3% 5% ;
 }
 
 /*Top section*/
@@ -267,20 +268,23 @@ button.btn-inst:hover {
 }
 
 .play-btn {
-  background: url("play-circle-solid.svg");
+  /* background: url("play-circle-solid.svg"); */
+  background: url("images/play-circle-blue.png");
   position: relative;
   top: 14px;
-  height:52px;
-  width:52px;
+  height:60px;
+  width:60px;
   float:right;
   cursor: pointer;
   background-repeat: no-repeat;
   border: none;
 
+
 }
 
 .play-btn:hover{
-  background-image: url("play-circle-regular.svg");
+  background-image: url("images/play-circle-outline.png");
+  /* background-image: url("play-circle-white.png");  */
   cursor:pointer;
 }
 
@@ -352,7 +356,6 @@ button.dl-btn {
 
 }
 
-
 .row-info:hover {
   background-color: #f4f4f4;
 }
@@ -372,6 +375,112 @@ button.dl-btn {
   /* padding-left: 5%; */
   width: 100%;
 }
+#top-section {
+  /* background-image: url("https://cdn.pixabay.com/photo/2014/04/04/14/56/background-313415_960_720.jpg"); */
+  /* background-image: url("https://cdn.pixabay.com/photo/2020/07/24/13/21/headphones-5433956_960_720.jpg"); */
+  background-image: url("https://lh3.googleusercontent.com/proxy/nDmREPATrtSlAgp1gAPcbeIvPA_Apg_jAPSVIu3_OwxJuy2fPPBibUCio1iIe57L13UAL5PXk1xryaW_yAfoh7wS5_N6_6x2ICm1VAxqiLPM7q10307AOpMEMeid28YYdjaOqintZYYmzVImkOU=s0-d");
+  /* background-color: #212529; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 12% 15%;
+  color: white;
+}
+.welcome-h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  font-size: 4.5rem;
+  color: white;
+}
+.sd-h1 {
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+#mid-section {
+  background-image: url("https://cdn.pixabay.com/photo/2016/02/19/10/10/computer-1209104_960_720.jpg");
+  color: white;
+  padding: 15% 15%;
+
+}
+
+button.sub-btn {
+  position: relative;
+  top: 10px;
+  /* color: white; */
+}
+.mid-row {
+  padding-bottom: 20px;
+}
+
+#bot-section {
+  padding: 0 15%;
+}
+img.img-card{
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+  width: 100%;
+
+}
+div.card-body {
+  padding: .2rem 5%;
+  font-size: 14px;
+}
+.cb-header {
+  padding-top: .5rem;
+  padding-bottom: 0:;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.cb-header:hover {
+  text-decoration: underline;
+}
+
+.cb-text {
+  margin-top: 0;
+}
+.bot-header {
+  font-weight: 700;
+}
+
+.bot-card {
+  cursor: pointer;
+}
+.bot-card:hover {
+  background-color: #e8e8e8;
+  opacity: .8;
+}
+
+.pb-btn-hover {
+  visibility: hidden;
+  position: absolute;
+  top: 70px;
+  left: 85px;
+}
+.pb-btn {
+  visibility: visible;
+  position: absolute;
+  top: 70px;
+  left: 85px;
+}
+.play-card-btn {
+  /* material designs icons from google */
+  background: url("images/play-circle-blue.png");
+  height:60px;
+  width:60px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  border: none;
+
+
+}
+
+.play-card-btn:hover{
+  background-image: url("images/play-circle-white.png");
+  cursor:pointer;
+}
+
 
 url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
  body {
@@ -424,8 +533,6 @@ url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
      box-shadow: 0px 1px 3px #666;
 }
 
-
-
 @media (min-width: 600px) {
       .form-row-collapse {
       display: none;
@@ -446,11 +553,10 @@ url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
       float:left;
       position: relative;
       top: 35px;
-      /* display: none; */
+
     }
-
-
 }
+
 @media (max-width:576px) {
     .form-row-collapse {
         width:40%;
@@ -462,23 +568,18 @@ url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
   .dl-btn {
     display: none;
   }
-
-
-
 }
+
 @media (min-width: 770px) {
   .pad-mid-text2 {
     display: none;
-
   }
-
   .pack-text{
     position: relative;
     left: 10px;
-
   }
-
 }
+
 @media (min-width: 700px) and (max-width:950px) {
   .pad-mid-text {
     font-size:13px;
@@ -518,7 +619,6 @@ url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
   }
 }
-
     #top-form {
        display:none;
     }
