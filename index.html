@@ -324,14 +324,33 @@
       </div>
 
   </section>
+<section>
 
-  <section>
+  <div class="side-area">
+    <button id="toggle" class="openbtn" onclick="toggleNav()"> <img src="arrow-left-bold-outline.png" alt=""> </button>
+
+    <div id="mySidepanel" class="sidepanel">
+      <!-- <a href="javascript:void(0)" class="clostbtn" onclick="closeNav()">x</a> -->
+        <h3>Beat Machine</h3>
+
+
+    </div>
+  </div>
+
+  <!-- <button class="openbtn" onclick="openNav()"> <img src="arrow-left-bold-outline.png" alt=""> </button> -->
+
+
+
+
+
+</section>
+  <!-- <section>
     <button id="collapse-btn" type="button" class="collapsible">Piano Roll</button>
   <div class="content">
 
     <div id="base" class="piano-roll">
       <webaudio-pianoroll id="proll"  width="800" height="400" xrange="64" markend="64"  editmode="dragmono"></webaudio-pianoroll>
-<!-- collt="#33f" coldk="#338" width="600" height="400"-->
+
       <div class="roll-sliders ">
         <webaudio-slider oninput="Layout(this)" id="xrange" direction="horz" width="120" height="24" min="1" max="10" value="1"></webaudio-slider>
         <webaudio-slider oninput="Layout(this)" id="xoffset" direction="horz" width="200" height="24" min="0" max="20" step="0.01" value="0"></webaudio-slider>
@@ -351,9 +370,9 @@
       </div>
 
     </div>
-  </div> <!-- collapse end -->
+  </div> collapse end
 
-  </section>
+  </section> -->
   <!-- <section>
 <ul id="piano">
   <li data-note="C4" class="key">
@@ -395,6 +414,31 @@
   <script src="piano.js"></script>
 <script type="text/javascript">
 
+var nav = false;
+function openNav(){
+  document.getElementById("mySidepanel").style.width = "250px";
+  // document.getElementById("toggle").style.width = "260px";
+  nav = true;
+}
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+  // document.getElementById("toggle").style.width = "20px";
+  nav = false;
+}
+
+function toggleNav() {
+   nav ? closeNav() : openNav();
+}
+
+$(document).ready(function(){
+
+  $("#switch")
+  .button()
+  .click(function(){
+
+      $("#panel").toggle("slide");
+  });
+});
 
 $('.wave').each(function(){
   //Generate unic ud
