@@ -6,12 +6,12 @@
 //         onload: () => {
 //         sampler.triggerAttackRelease(["C1", "E1", "G1", "B1"], 0.5);
 //         }
-// }).toDestination();
-
-const sound = new Tone.Player("sounds/RICKYXSAN_growl_one_shot_04_E.wav").toDestination();
-  Tone.loaded().then(() => {
-  	sound.start();
-  });
+// // }).toDestination();
+//
+// const sound = new Tone.Player("sounds/RICKYXSAN_growl_one_shot_04_E.wav").toDestination();
+//   Tone.loaded().then(() => {
+//   	sound.start();
+//   });
 
 const player = new Tone.Synth().toDestination();
 

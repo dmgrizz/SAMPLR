@@ -269,9 +269,9 @@ button.btn-inst:hover {
 
 .play-btn {
   /* background: url("play-circle-solid.svg"); */
-  background: url("images/play-circle-blue.png");
+  background: url("images/play-circle-dark.png");
   position: relative;
-  top: 14px;
+  top: 10px;
   height:60px;
   width:60px;
   float:right;
@@ -283,8 +283,8 @@ button.btn-inst:hover {
 }
 
 .play-btn:hover{
-  background-image: url("images/play-circle-outline.png");
-  /* background-image: url("play-circle-white.png");  */
+  /* background-image: url("images/play-circle-outline.png"); */
+  background-image: url("images/play-circle-outline-dark.png");
   cursor:pointer;
 }
 
@@ -401,6 +401,8 @@ button.dl-btn {
   background-image: url("https://cdn.pixabay.com/photo/2016/02/19/10/10/computer-1209104_960_720.jpg");
   color: white;
   padding: 15% 15%;
+  background-repeat: no-repeat;
+  background-size: 1920px 960px;
 
 }
 
@@ -439,13 +441,21 @@ div.card-body {
 
 .cb-text {
   margin-top: 0;
+  display: inline-block;
+
 }
 .bot-header {
   font-weight: 700;
+  display: inline;
 }
 
 .bot-card {
   cursor: pointer;
+
+
+}
+.card-body {
+  display: inline-block;
 }
 .bot-card:hover {
   background-color: #e8e8e8;
@@ -454,25 +464,53 @@ div.card-body {
 
 .pb-btn-hover {
   visibility: hidden;
-  position: absolute;
-  top: 70px;
-  left: 85px;
+  /* position: absolute;
+  top: 120px;
+  left: 132px; */
 }
 .pb-btn {
   visibility: visible;
-  position: absolute;
+  /* position: absolute;
   top: 70px;
-  left: 85px;
+  left: 100px; */
 }
+.card-img{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: block;
+  width: auto;
+  height: auto;
+
+}
+.card-body {
+  max-width: 50%;
+}
+.img-group {
+  /* background-color: transparent;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: relative;
+  width: 100%;
+  display: flex;
+
+}
+
 .play-card-btn {
   /* material designs icons from google */
   background: url("images/play-circle-blue.png");
   height:60px;
   width:60px;
+  /* position: absolute;
+  left: 110px;
+  top: 110px; */
+  float:rLEFT;
   cursor: pointer;
   background-repeat: no-repeat;
   border: none;
-
 
 }
 
@@ -585,8 +623,11 @@ url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
     font-size:13px;
     padding: 3px;
     vertical-align: middle;
-
-    /* color:red; */
+  }
+  .play-card-btn{
+    position: relative;
+    top:50px;
+    right:10px;
   }
 }
 
