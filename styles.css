@@ -196,7 +196,7 @@ button.btn-inst:hover {
   background-color: #eeeeee;
   color: #0f4c75;
 }
-
+/*
 .roll-sliders {
   position: relative;
 
@@ -227,40 +227,40 @@ button.btn-inst:hover {
     position:relative;
     left:425px;
     bottom: 160px;
-
 }
 
 #xoffset {
     position:relative;
     left:450px;
     bottom: 160px;
-
 }
 
 #collapse-btn {
   position: absolute;
   right:0;
-}
+} */
 
 #waveform {
   /* background: rgba(0,0,0,0.8); */
 }
+
 #main {
   padding: 0 0;
 
   margin-bottom: 5px;
 }
-
 .text-middle {
   vertical-align: middle;
   margin: 20px 0;
 }
+
 .wave-container {
   width:200px;
   text-align: center;
   vertical-align: middle;
   /* display: inline-block; */
 }
+
 .row-pack-img {
   max-height: 70px;
   max-width: 30px;
@@ -278,8 +278,6 @@ button.btn-inst:hover {
   cursor: pointer;
   background-repeat: no-repeat;
   border: none;
-
-
 }
 
 .play-btn:hover{
@@ -292,20 +290,19 @@ button.btn-inst:hover {
   outline: 0;
 }
 
-
 .check-box{
   position: relative;
   top:5px;
   margin-right: 10px;
 }
+
 .dl-btn {
   cursor: pointer;
   border: none;
   position: relative;
   top:5px;
-
-
 }
+
 .fv-btn {
   background-image: url("images/heart-regular.svg");
   cursor: pointer;
@@ -327,8 +324,8 @@ button.btn-inst:hover {
   min-height:36px;
   min-width:36px;
   background-color: transparent;
-
 }
+
 .favorite:focus{
   outline: 0;
 }
@@ -337,8 +334,8 @@ button.btn-inst:hover {
   display: flex;
   flex-direction: row;
     margin:0;
-
 }
+
 button.fv-btn {
   background-color: transparent;
 }
@@ -353,7 +350,6 @@ button.dl-btn {
 
 .pad-mid-text {
   padding-top:10px;
-
 }
 
 .row-info:hover {
@@ -363,18 +359,24 @@ button.dl-btn {
 .header-audio{
   /* padding-left:5%; */
 }
+
 .header-titles{
   background-color: #212529;
   color: white;
   padding: 1% 1%;
 }
+
 .header-text {
   margin-top: 10px;
 }
+
 .body-audio {
   /* padding-left: 5%; */
   width: 100%;
 }
+
+/* HOMEPAGE CSS */
+
 #top-section {
   /* background-image: url("https://cdn.pixabay.com/photo/2014/04/04/14/56/background-313415_960_720.jpg"); */
   /* background-image: url("https://cdn.pixabay.com/photo/2020/07/24/13/21/headphones-5433956_960_720.jpg"); */
@@ -386,12 +388,14 @@ button.dl-btn {
   padding: 12% 15%;
   color: white;
 }
+
 .welcome-h1 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 600;
   font-size: 4.5rem;
   color: white;
 }
+
 .sd-h1 {
   font-weight: bold;
   font-size: 4rem;
@@ -403,7 +407,6 @@ button.dl-btn {
   padding: 15% 15%;
   background-repeat: no-repeat;
   background-size: 1920px 960px;
-
 }
 
 button.sub-btn {
@@ -411,6 +414,7 @@ button.sub-btn {
   top: 10px;
   /* color: white; */
 }
+
 .mid-row {
   padding-bottom: 20px;
 }
@@ -418,6 +422,7 @@ button.sub-btn {
 #bot-section {
   padding: 0 15%;
 }
+
 img.img-card{
   padding-top: 5%;
   padding-right: 5%;
@@ -425,16 +430,19 @@ img.img-card{
   width: 100%;
 
 }
+
 div.card-body {
   padding: .2rem 5%;
   font-size: 14px;
 }
+
 .cb-header {
   padding-top: .5rem;
   padding-bottom: 0:;
   margin-bottom: 0;
   font-size: 14px;
 }
+
 .cb-header:hover {
   text-decoration: underline;
 }
@@ -442,8 +450,8 @@ div.card-body {
 .cb-text {
   margin-top: 0;
   display: inline-block;
-
 }
+
 .bot-header {
   font-weight: 700;
   display: inline;
@@ -451,29 +459,25 @@ div.card-body {
 
 .bot-card {
   cursor: pointer;
-
-
 }
+
 .card-body {
   display: inline-block;
 }
+
 .bot-card:hover {
   background-color: #e8e8e8;
-  opacity: .8;
+  opacity: 1.0;
 }
 
 .pb-btn-hover {
   visibility: hidden;
-  /* position: absolute;
-  top: 120px;
-  left: 132px; */
 }
+
 .pb-btn {
   visibility: visible;
-  /* position: absolute;
-  top: 70px;
-  left: 100px; */
 }
+
 .card-img{
   position: relative;
   margin-left: auto;
@@ -485,14 +489,9 @@ div.card-body {
 
 }
 .card-body {
-  max-width: 50%;
+  max-width: 100%;
 }
 .img-group {
-  /* background-color: transparent;
-  width:100%;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
   position: relative;
   width: 100%;
   display: flex;
@@ -504,19 +503,19 @@ div.card-body {
   background: url("images/play-circle-blue.png");
   height:60px;
   width:60px;
-  /* position: absolute;
-  left: 110px;
-  top: 110px; */
-  float:rLEFT;
+  float:right;
   cursor: pointer;
   background-repeat: no-repeat;
   border: none;
-
 }
 
 .play-card-btn:hover{
   background-image: url("images/play-circle-white.png");
   cursor:pointer;
+}
+
+.play-card-btn:focus {
+  outline: 0;
 }
 
 .sidepanel {
@@ -536,6 +535,7 @@ div.card-body {
   /* max-width: 300px; */
   /* display: inline-block; */
 }
+
 .sidepanel a {
   padding: 8px 8px 8px 8px;
   text-decoration: none;
@@ -544,19 +544,22 @@ div.card-body {
   display: block;
   transition: 0.3;
 }
+
 .sidepanel a:hover {
   color:#f1f1f1;
-
 }
+
 .sidepanel .closebtn .side-area {
   position: absolute;
   top:0;
   right: 25px;
   font-size: 36px;
 }
+
 .openbtn {
   position: relative;
-  right: 10px;
+  right: -40px;
+  top:0;
   font-size: 20px;
   cursor: pointer;
   background-color: #111;
@@ -565,10 +568,48 @@ div.card-body {
   border: none;
   float: right;
   vertical-align: middle;
+}
+.openbtn:hover{
+  right:0;
+
 
 }
+
 .openbtn:hover {
   background-color: #444;
+}
+
+footer {
+  font-family: 'Ubuntu', sans-serif;
+  padding:5% 15%;
+  background-color: #444;
+  color: white;
+}
+
+.footer-hd {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.footer-icons {
+  height: 36px;
+  width: 36px;
+  margin:15px 5px;
+}
+
+.footer-icons:hover {
+  opacity: .5;
+}
+
+.footer-info{
+  padding: 5px 10px;
+}
+
+.creator {
+  margin-top: 60px;
+  font-size: 14px;
+  font-weight: 200;
+  opacity: .6;
 }
 
 
