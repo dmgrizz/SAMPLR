@@ -196,53 +196,6 @@ button.btn-inst:hover {
   background-color: #eeeeee;
   color: #0f4c75;
 }
-/*
-.roll-sliders {
-  position: relative;
-
-
-}
-.piano-roll{
-  background-color: gray;
-  padding: 5% 15%;
-}
-.piano-buttons {
-  position: relative;
-  bottom:175px;
-}
-
-#yrange {
-    position:relative;
-    left:480px;
-    bottom: 250px;
-
-}
-#yoffset {
-  position:relative;
-  left:450px;
-  bottom: 400px;
-}
-
-#xrange {
-    position:relative;
-    left:425px;
-    bottom: 160px;
-}
-
-#xoffset {
-    position:relative;
-    left:450px;
-    bottom: 160px;
-}
-
-#collapse-btn {
-  position: absolute;
-  right:0;
-} */
-
-#waveform {
-  /* background: rgba(0,0,0,0.8); */
-}
 
 #main {
   padding: 0 0;
@@ -258,7 +211,6 @@ button.btn-inst:hover {
   width:200px;
   text-align: center;
   vertical-align: middle;
-  /* display: inline-block; */
 }
 
 .row-pack-img {
@@ -268,7 +220,6 @@ button.btn-inst:hover {
 }
 
 .play-btn {
-  /* background: url("play-circle-solid.svg"); */
   background: url("images/play-circle-dark.png");
   position: relative;
   top: 10px;
@@ -281,7 +232,6 @@ button.btn-inst:hover {
 }
 
 .play-btn:hover{
-  /* background-image: url("images/play-circle-outline.png"); */
   background-image: url("images/play-circle-outline-dark.png");
   cursor:pointer;
 }
@@ -356,11 +306,7 @@ button.dl-btn {
   background-color: #f4f4f4;
 }
 
-.header-audio{
-  /* padding-left:5%; */
-}
-
-.header-titles{
+.header-titles {
   background-color: #212529;
   color: white;
   padding: 1% 1%;
@@ -371,7 +317,6 @@ button.dl-btn {
 }
 
 .body-audio {
-  /* padding-left: 5%; */
   width: 100%;
 }
 
@@ -412,7 +357,6 @@ button.dl-btn {
 button.sub-btn {
   position: relative;
   top: 10px;
-  /* color: white; */
 }
 
 .mid-row {
@@ -584,14 +528,6 @@ div.card-body {
   vertical-align: middle;
 }
 
-/* .openbtn:hover{
-  right:0;
-  transition: 0.5s;
-  background-color: #444;
-
-} */
-
-
 .horizTranslate {
   -webkit-transition: 3s;
   -moz-transition: 3s;
@@ -634,59 +570,9 @@ footer {
   opacity: .6;
 }
 
-
-/*
-url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
- body {
-     font-family: 'Roboto', sans-serif;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     min-height: 100vh;
+.hidden {
+  display: none;
 }
- ul {
-     list-style: none;
-     display: flex;
-}
- ul .key {
-     position: relative;
-     width: 60px;
-     height: 180px;
-     border: 1px solid black;
-     border-right: none;
-     background: #fffff0;
-     border-radius: 5px;
-     box-shadow: 0px 3px 5px #666;
-     cursor: pointer;
-     display: flex;
-     justify-content: center;
-     align-items: flex-end;
-     padding-bottom: 10px;
-     font-weight: bold;
-}
- ul .key:last-child {
-     border-right: 1px solid black;
-}
- ul .black-key {
-     position: absolute;
-     top: -1px;
-     left: 37.5px;
-     width: 45px;
-     height: 120px;
-     background: black;
-     border-radius: 5px;
-     box-shadow: 0px 3px 5px #666;
-     z-index: 999;
-     display: flex;
-     justify-content: center;
-     align-items: flex-end;
-     padding-bottom: 10px;
-     color: white;
-}
- ul .active {
-     box-shadow: 0px 1px 3px #666;
-} */
-
 @media (min-width: 600px) {
       .form-row-collapse {
       display: none;

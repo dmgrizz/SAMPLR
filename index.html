@@ -95,10 +95,10 @@
                   </div>
 <!-- drop down menu BPM  -->
                 <div class="dropdown btn-drop">
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Loops & One Shots</option>
-                    <option class="" value="1">Loops</option>
-                    <option class="" value="2">One Shots</option>
+                  <select class="custom-select" id="select-custom">
+                    <option class="filter-select" value="all" selected>Loops & One Shots</option>
+                    <option class="filter-select"value="loop">Loops</option>
+                    <option class="filter-select"value="one-shot">One Shots</option>
                   </select>
                 </div>
                 <div class="btn-drop">
@@ -134,7 +134,7 @@
                       <button class="btn btn-primary btn-block bpm-button" role="button"> Update </button>
                   </div>
                 </div>
-<!-- drop down menu KEYS & Instruements -->
+<!-- drop down menu KEYS & Instruments -->
                   <div class="btn-drop">
                     <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Key
@@ -151,6 +151,7 @@
                         </li>
                       </ul>
                       <div class="dropdown-divider"></div>
+<!-- Key Drop Down Menu -->
                       <div class="tab-content" id="myTabContent2">
                         <h6 class="root-note">ROOT NOTE</h6>
                         <div class="dropdown-divider"></div>
@@ -190,22 +191,22 @@
                   <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Instruments
                   </button>
-
+<!-- Instrument Drop Down Menu -->
                     <div class="dropdown-menu row inst-row" aria-labelledby="dropdownMenuButton">
                       <div class="inst-col col-5">
-                        <h6><button class="btn btn-white btn-inst" name="button">Bass</button></h6>
-                        <h6><button class="btn btn-white btn-inst" name="button">Drums</button></h6>
-                        <h6><button class="btn btn-white btn-inst" name="button">Percussion</button></h6>
-                        <h6><button class="btn btn-white btn-inst" name="button">Strings</button></h6>
-                        <h6><button class="btn btn-white btn-inst" name="button">Guitar</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="bass">Bass</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="drum">Drums</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="perc">Percussion</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="string">Strings</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="guitar">Guitar</button></h6>
                       </div>
 
                       <div class="inst-col col-5">
-                        <h6><button class="btn btn-white btn-inst" name="button">Synths</button></h6>
-                        <h6><button class="btn btn-white btn-inst" name="button">Pads</button></h6>
-                        <h6><button class="btn btn-white btn-inst" name="button">FX</button></h6>
-                        <h6><button class="btn btn-white btn-inst" name="button">Vocals</button></h6>
-                        <h6><button class="btn btn-white btn-inst" name="button">Brass & Woodlands</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="synth">Synths</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="pad">Pads</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="fx">FX</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="vocal">Vocals</button></h6>
+                        <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="bnw">Brass & Woodlands</button></h6>
                       </div>
                     </div>
                   </div>
@@ -213,7 +214,7 @@
                     <button class="btn btn-light btn-sm active dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Genre
                     </button>
-
+<!-- Genre Drop Down Menu  -->
                       <div class="dropdown-menu row inst-row  filter-buttons" aria-labelledby="dropdownMenuButton">
                         <div class="inst-col col-5">
                           <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="all">All</button></h6>
@@ -265,7 +266,7 @@
                   </div>
                   <div class="body-audio">
                       <div id="filter-rows" class="container-fluid">
-                        <div class="row row-info filter hybrid Emin">
+                        <div class="row row-info filter hybrid Emin bass one-shot" data-eventtype="one-shot">
                           <div class="col-lg-auto col-md-auto col-sm-1">
                             <input class="check-box" type="checkbox" aria-label="Checkbox for following text input">
                           </div>
@@ -288,7 +289,7 @@
                                   <a href="sounds/RICKYXSAN_growl_one_shot_04_E.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                               </div>
                         </div>
-                        <div class="row row-info filter trap Cmin">
+                        <div class="row row-info filter trap Cmin drum one-shot" data-eventtype="one-shot">
                           <div class="col-lg-auto col-md-auto col-sm-1">
                             <input class="check-box" type="checkbox" aria-label="Checkbox for following text input">
                           </div>
@@ -311,7 +312,7 @@
                                 <a href="sounds/UZ_808_qx_04_F.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                             </div>
                         </div>
-                        <div class="row row-info filter future-bass Cmaj">
+                        <div class="row row-info filter future-bass Cmaj drum one-shot" data-eventtype="one-shot">
                           <div class="col-lg-auto col-md-auto col-sm-1">
                             <input class="check-box" type="checkbox" aria-label="Checkbox for following text input">
                           </div>
@@ -334,7 +335,7 @@
                                 <a href="sounds/CLF_ClosedHH_Trap.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                             </div>
                         </div>
-                        <div class="row row-info filter hip-hop Cmin">
+                        <div class="row row-info filter hip-hop Cmin drum perc loop" data-eventtype="loop">
                           <div class="col-lg-auto col-md-auto col-sm-1">
                             <input class="check-box" type="checkbox" aria-label="Checkbox for following text input">
                           </div>
@@ -496,6 +497,8 @@ function toggleNav() {
   }
 
 
+
+
 // SEARCH BAR FILTER
   $("#sp-search").keyup(function() {
 
@@ -624,6 +627,31 @@ function toggleNav() {
       });
 
   });
+
+
+    var oshot = document.getElementsByClassName("one-shot").length;
+    var loop = document.getElementsByClassName("loop").length;
+    var all = loop + oshot;
+
+  document.getElementByClassName('custom-select').addEventListener('change', function() {
+  console.log('You selected: ', this.value);
+
+ var selection = document.getElementsByClassName("one-shot");
+  document.getElementsByClassName("one-shot").style.display = "none";
+
+
+
+    // document.getElementsByClassName(".filter").style.display = "block";
+    //
+    // document.getElementsByClassName(".filter").style.display = "none";
+
+  // alert(all);
+  // alert(oshot);
+  // alert(loop);
+
+});
+
+
 
 
 $('.wave').each(function(){
