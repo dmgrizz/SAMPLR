@@ -286,7 +286,7 @@
                               <div class="col-1 col-lg-1 col-md-1 col-sm-1  text-center text-middle pad-mid-text">E</div>
                               <div class="col-1 col-lg-1 col-md-auto col-sm-auto text-center text-middle pad-mid-text">132</div>
                               <div class="col-1 col-lg-1 col-md-1 side-btns">
-                                  <button class="fv-btn"  type="button"> </button>
+                                  <button class="fv-btn like"  type="button"> </button>
                                   <a href="sounds/RICKYXSAN_growl_one_shot_04_E.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                               </div>
                         </div>
@@ -309,7 +309,7 @@
                             <div class="col-1 text-center text-middle pad-mid-text">C</div>
                             <div class="col-1 text-center text-middle pad-mid-text">132</div>
                             <div class="col-1 col-lg-1 col-md-1 side-btns">
-                                <button class="fv-btn"  type="button"> </button>
+                                <button class="fv-btn like"  type="button"> </button>
                                 <a href="sounds/UZ_808_qx_04_F.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                             </div>
                         </div>
@@ -499,7 +499,38 @@ function toggleNav() {
 
 
 
+  //FAVORITE BUTTON ADD CLASS
+    $(".fv-btn").on("click", function(e) {
+      $(this).toggleClass("fv-btn fav");
+      var self = $(this).parents('.row-info');
+      self.toggleClass("favorite");
 
+
+    });
+
+    const likeButtons = document.getElementsByClassName("like");
+    function alertButton(){
+      alert("favorite button was clicked" );
+
+
+    }
+    for(let likeButton of likeButtons){
+      likeButton.addEventListener("click", alertButton, false);
+    }
+
+    function myFavorite() {
+    var x = localStorage.length;
+    document.getElementsByClassName("favorite") = x;
+    }
+
+
+    // var favorites = document.querySelectorAll(".favorite") || [];
+    // var elements = document.getElementsByClassName("favorite");
+  // var favorites = document.querySelectorAll(".favorite");
+  // var localStorage = JSON.parse(localStorage.getItem("favorite"));
+  // Object.keys(localStorage).forEach(function(key){
+  //    console.log(localStorage.getItem(key));
+  // });
 // SEARCH BAR FILTER
   $("#sp-search").keyup(function() {
 
@@ -673,11 +704,6 @@ $('.wave').each(function(){
   });
   });
 
-  $(".fv-btn").on("click", function() {
-    $(this).toggleClass("fv-btn favorite");
-
-
-  });
 
 
 
