@@ -18,6 +18,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 
+
   </head>
   <body>
 
@@ -86,9 +87,9 @@
                             <!-- <label class="input-group-text" for="inputGroupSelect01">Popular</label> -->
                           </div>
                           <select class="custom-select" id="inputGroupSelect01">
-                            <option value="1">Popular</option>
-                            <option value="2">Recent</option>
-                            <option value="3">Relevant</option>
+                            <option class="filter-select"value="1">Popular</option>
+                            <option  class="filter-select" value="2">Recent</option>
+                            <option  class="filter-select" value="3">Relevant</option>
                           </select>
                         </div>
                     </div>
@@ -97,8 +98,8 @@
                 <div class="dropdown btn-drop">
                   <select class="custom-select" id="select-custom">
                     <option class="filter-select" value="all" selected>Loops & One Shots</option>
-                    <option class="filter-select"value="loop">Loops</option>
-                    <option class="filter-select"value="one-shot">One Shots</option>
+                    <option class="filter-select" value="loop">Loops</option>
+                    <option class="filter-select" value="one-shot">One Shots</option>
                   </select>
                 </div>
                 <div class="btn-drop">
@@ -215,7 +216,7 @@
                       Genre
                     </button>
 <!-- Genre Drop Down Menu  -->
-                      <div class="dropdown-menu row inst-row  filter-buttons" aria-labelledby="dropdownMenuButton">
+                      <div class="dropdown-menu row inst-row" aria-labelledby="dropdownMenuButton">
                         <div class="inst-col col-5">
                           <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="all">All</button></h6>
                           <h6><button class="btn btn-white btn-inst filter-button" name="button" data-filter="edm">EDM</button></h6>
@@ -265,7 +266,7 @@
                       </div>
                   </div>
                   <div class="body-audio">
-                      <div id="filter-rows" class="container-fluid">
+                      <div id="filter-rows" class="row-filter container-fluid">
                         <div class="row row-info filter hybrid Emin bass one-shot" data-eventtype="one-shot">
                           <div class="col-lg-auto col-md-auto col-sm-1">
                             <input class="check-box" type="checkbox" aria-label="Checkbox for following text input">
@@ -289,7 +290,7 @@
                                   <a href="sounds/RICKYXSAN_growl_one_shot_04_E.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                               </div>
                         </div>
-                        <div class="row row-info filter trap Cmin drum one-shot" data-eventtype="one-shot">
+                        <div class="row row-info filter trap Cmin drum one-shot"  data-eventtype="one-shot">
                           <div class="col-lg-auto col-md-auto col-sm-1">
                             <input class="check-box" type="checkbox" aria-label="Checkbox for following text input">
                           </div>
@@ -629,28 +630,17 @@ function toggleNav() {
   });
 
 
-    var oshot = document.getElementsByClassName("one-shot").length;
-    var loop = document.getElementsByClassName("loop").length;
-    var all = loop + oshot;
-
-  document.getElementByClassName('custom-select').addEventListener('change', function() {
-  console.log('You selected: ', this.value);
-
- var selection = document.getElementsByClassName("one-shot");
-  document.getElementsByClassName("one-shot").style.display = "none";
-
-
-
-    // document.getElementsByClassName(".filter").style.display = "block";
-    //
-    // document.getElementsByClassName(".filter").style.display = "none";
-
-  // alert(all);
-  // alert(oshot);
-  // alert(loop);
-
-});
-
+  $( ".custom-select" ).change(function() {
+    var selectedEventType = this.options[this.selectedIndex].value;
+    if (selectedEventType == "all") {
+      // $('.row-info').removeClass('hidden');
+      $('.row-info').attr('style', 'display: ');
+    } else {
+      // $('.row-info').addClass('hidden');
+      $('.row-info').attr('style', 'display: none');
+      $('.row-info[data-eventtype="' + selectedEventType + '"]').attr('style', 'display: ');
+    }
+  });
 
 
 
