@@ -483,7 +483,7 @@ function toggleNav() {
     document.getElementById("toggle").style.background = "red";
     if(!nav){
       document.getElementById("toggle").style.right = "0";
-      changeGenre();
+      // changeGenre(genre);
 
       }
   }
@@ -497,40 +497,81 @@ function toggleNav() {
 
   }
 
+  // get favorites from local storage or empty array
 
 
+  // add class 'fav' to each favorite
   //FAVORITE BUTTON ADD CLASS
     $(".fv-btn").on("click", function(e) {
       $(this).toggleClass("fv-btn fav");
       var self = $(this).parents('.row-info');
       self.toggleClass("favorite");
-
-
     });
 
     const likeButtons = document.getElementsByClassName("like");
-    function alertButton(){
-      alert("favorite button was clicked" );
-
-
-    }
+    // register click event listener
     for(let likeButton of likeButtons){
       likeButton.addEventListener("click", alertButton, false);
     }
+    function alertButton(){
 
-    function myFavorite() {
-    var x = localStorage.length;
-    document.getElementsByClassName("favorite") = x;
-    }
+      var myElements = document.getElementsByClassName("favorite");
+        for(var i = 0; i < myElements.length; i++){
+
+          console.log(myElements[i]);
+          localStorage.setItem('likes', i);
+
+        }
+          alert("favorite button was clicked " + i); //this is outputing the correct div row-info with favorite and the favorite amount array
+
+        // alert(localStorage.getItem('likes'));
+        // for(let i=0; i<localStorage.length; i++) {
+        // let key = localStorage.key(i);
+        // alert(`${key}: ${localStorage.getItem(key)}`);
+        //
+        // }
+          // alert(localStorage.getItem("likes"));
+          localStorage.setItem('likes', JSON.stringify(myElements));
+      }
+
+    // function myStorage(){
+    //   localStorage.getItem(i);
+    // }
 
 
-    // var favorites = document.querySelectorAll(".favorite") || [];
-    // var elements = document.getElementsByClassName("favorite");
-  // var favorites = document.querySelectorAll(".favorite");
-  // var localStorage = JSON.parse(localStorage.getItem("favorite"));
-  // Object.keys(localStorage).forEach(function(key){
-  //    console.log(localStorage.getItem(key));
-  // });
+    // get favorites from local storage or empty array
+    var favorites = JSON.parse(localStorage.getItem('favorite')) || [];
+    // add class 'fav' to each favorite
+    favorites.forEach(function(favorite) {
+      document.getElementById(favorite).className = 'favorite';
+    });
+    // register click event listener
+    document.querySelector('.like').addEventListener('click', function(e) {
+      var id = e.target.id,
+          item = e.target,
+          index = favorites.indexOf(id);
+      // return if target doesn't have an id (shouldn't happen)
+      if (!id) return;
+      // item is not favorite
+      if (index == -1) {
+        favorites.push(id);
+        item.className = 'favorite';
+      // item is already favorite
+      } else {
+        favorites.splice(index, 1);
+        item.className = '';
+      }
+      // store array in local storage
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+    });
+
+    // local storage stores strings so we use JSON to stringify for storage and parse to get out of storage
+
+
+
+
+
+
 // SEARCH BAR FILTER
   $("#sp-search").keyup(function() {
 

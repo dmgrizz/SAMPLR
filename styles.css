@@ -264,7 +264,7 @@ button.btn-inst:hover {
   min-width:36px;
 }
 
-.favorite {
+.fav {
   background-image: url("images/heart-solid.svg");
   cursor: pointer;
   border: none;
@@ -276,7 +276,7 @@ button.btn-inst:hover {
   background-color: transparent;
 }
 
-.favorite:focus{
+.fav:focus{
   outline: 0;
 }
 
