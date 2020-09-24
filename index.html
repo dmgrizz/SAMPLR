@@ -502,26 +502,77 @@ function toggleNav() {
   }
 
 
+  // $(document).ready(function(){
+  // 	$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+  // 		localStorage.setItem('activeTab', $(e.target).attr('href'));
+  // 	});
+  // 	var activeTab = localStorage.getItem('activeTab');
+  // 	if(activeTab){
+  // 		$('#myTab a[href="' + activeTab + '"]').tab('show');
+  // 	}
+  // });
   $(document).ready(function(){
 
-      localStorage.getItem('switch-state');
-    if(localStorage.getItem('switch-state') && localStorage.getItem('switch-state' === true)){
-      $('fv-btn').addClass("fav");
-      $('.row-info').addClass("favorite");
+      // rows.nextAll().addBack().addClass('favorite');
 
-    }
 
-    $(".fv-btn").on("click", function(e) {
-      $(this).toggleClass("fv-btn fav");
-      var self = $(this).parents('.row-info');
-      let el = $('.fv-btn');
-      self.toggleClass("favorite");
 
-      localStorage.setItem('switch-state', el.hasClass('favorite'));
 
-    });
+
+      // var saved = JSON.parse(localStorage.getItem('switch-state'));
+      // console.log("if statement ran " + saved);
+
 
   });
+
+
+$(document).ready(function(){
+
+  $('.like').addClass(localStorage.getItem('like-this'));
+
+
+  $(".like").on("click", function() {
+     for (var k = 1; k < i; k++) {
+    if($(this).hasClass('fv-btn')){
+      $(this).removeClass("fv-btn").addClass("fav");
+      localStorage.setItem('like-this', 'fav');
+    }
+    else if($(this).hasClass('fav')){
+      $(this).removeClass("fav").addClass("fv-btn");
+      localStorage.setItem('like-this', 'fv-btn');
+    }
+    console.log(localStorage);
+  }
+});
+});
+
+
+
+
+  // $(document).ready(function(){
+  //
+  //   if(typeof(Storage) !== "undefined" && JSON.stringify(localStorage.getItem('div-state')) && JSON.stringify(localStorage.getItem('like-state')) ){
+  //           var rows = $('.row-info');
+  //           rows.nextAll().addBack().css("background-color", "red");
+  //           var favorited = localStorage.getItem("div-state");
+  //           rows.removeClass('favorite');
+  //   }
+  //
+  //   $(".like").on("click", function(e) {
+  //     var like = $(this).toggleClass("fv-btn fav");
+  //     var self = $(this).parents('.row-info');
+  //     self.toggleClass("favorite");
+  //
+  //
+  //       localStorage.setItem('div-state', self.hasClass('favorite'));
+  //       localStorage.setItem('like-state', like.hasClass('fav'))
+  //
+  //       // localStorage.setItem('activeFav', JSON.stringify($(this).toggleClass("fv-btn fav")));
+  //       console.log("this shit was clicked");
+  //       console.log(localStorage);
+  //   });
+  //
+  // });
 
 
 const yoInput = document.querySelector('.yo-storage');
