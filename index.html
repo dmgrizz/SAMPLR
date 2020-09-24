@@ -267,7 +267,7 @@
                   </div>
                   <div class="body-audio">
                       <div id="filter-rows" class="row-filter container-fluid">
-                        <div class="row row-info filter hybrid Emin bass one-shot" data-eventtype="one-shot">
+                        <div id="fav-row"class="row row-info filter hybrid Emin bass one-shot" data-eventtype="one-shot">
                           <div class="col-lg-auto col-md-auto col-sm-1">
                             <input class="check-box" type="checkbox" aria-label="Checkbox for following text input">
                           </div>
@@ -367,7 +367,11 @@
 
   </section>
 <section>
-
+  <div class="yo-fool">
+    <input class="yo-storage"type="text" name="" value="">
+    <p class="yo-text">Text</p>
+    <button class="yo-save" type="button" name="button">Save</button>
+  </div>
 
 </section>
 <footer class="text-center">
@@ -497,115 +501,48 @@ function toggleNav() {
 
   }
 
-  // get favorites from local storage or empty array
 
-
-  // add class 'fav' to each favorite
-  // const liked = localStorage.getItem('likes');
-  //FAVORITE BUTTON ADD class
-  // var liked =  JSON.parse(localStorage.getItem('likes'));
-  // var liked =  JSON.parse(localStorage.getItem('likes')) || [];
-
-const myFavorites = document.querySelectorAll('.favorite');
-var liked = JSON.parse(localStorage.getItem('likes'));
   $(document).ready(function(){
+
+      localStorage.getItem('switch-state');
+    if(localStorage.getItem('switch-state') && localStorage.getItem('switch-state' === true)){
+      $('fv-btn').addClass("fav");
+      $('.row-info').addClass("favorite");
+
+    }
 
     $(".fv-btn").on("click", function(e) {
       $(this).toggleClass("fv-btn fav");
       var self = $(this).parents('.row-info');
+      let el = $('.fv-btn');
       self.toggleClass("favorite");
-      var favs = localStorage.ClassName = "favorite";
 
-      // $( ".favorite" ).each(function( index ) {
-      //   // console.log( index + ": " + $( this ).text() );
-      //   // liked.push(index);
-      //
-      //   // alert(localStorage.setItem('likes', JSON.stringify(index)));
-      //
-      // });
-      // localStorage.setItem('likes', JSON.stringify(self)); //favorite
-      localStorage.setItem('likes', JSON.stringify(favs)); //"favorite"
-      console.log("got the like " + localStorage.getItem('likes'));
+      localStorage.setItem('switch-state', el.hasClass('favorite'));
 
     });
 
   });
-//
-$(document).ready(function() {
-    SetClass();
+
+
+const yoInput = document.querySelector('.yo-storage');
+const yoText = document.querySelector('.yo-text');
+const yoSave = document.querySelector('.yo-save');
+const yoStoredInput = localStorage.getItem('textinput');
+
+
+if(yoStoredInput) {
+  yoText.textContent = yoStoredInput;
+}
+
+yoInput.addEventListener('input', letter => {
+
+  yoText.textContent = letter.target.value
 });
 
-function SetClass(){
-   $(".favorite").addClass(localStorage.ClassName);
+const saveToLocalStorage = () => {
+  localStorage.setItem('textinput', yoText.textContent);
 }
-//     const likeButtons = document.getElementsByClassName("like");
-//     // register click event listener
-//     for(let likeButton of likeButtons){
-//       likeButton.addEventListener("click", alertButton, false);
-//
-//     }
-// const myElements = document.getElementsByClassName("favorite") || [];
-// const stored = localStorage.getItem('likes');
-// // const saveToLocalStorage = () => {
-// //   localStorage.setItem('favo', 'favorite');
-// // }
-// if(myElements){
-//   likeButton = stored
-// }
-//    function alertButton(){
-//         for(var i = 0; i < myElements.length; i++){
-//           console.log(myElements[i]);
-//           // localStorage.setItem('likes', i);
-//         }
-//           alert("favorite button was clicked " + i); //this is outputing the correct div row-info with favorite and the favorite amount array
-//
-//         // alert(localStorage.getItem('likes'));
-//         // for(let i=0; i<localStorage.length; i++) {
-//         // let key = localStorage.key(i);
-//         // alert(`${key}: ${localStorage.getItem(key)}`);
-//         //
-//         // }
-//           alert(localStorage.getItem("likes"));
-//           console.log("how many likes " + localStorage.getItem("likes"));
-//           localStorage.setItem('likes', JSON.stringify(i));
-//
-//       }
-
-    // function myStorage(){
-    //   localStorage.getItem(i);
-    // }
-
-
-    // // get favorites from local storage or empty array
-    // var favorites = JSON.parse(localStorage.getItem('favorite')) || [];
-    // // add class 'fav' to each favorite
-    // favorites.forEach(function(favorite) {
-    //   document.getElementById(favorite).className = 'favorite';
-    // });
-    // // register click event listener
-    // document.querySelector('.like').addEventListener('click', function(e) {
-    //   var id = e.target.id,
-    //       item = e.target,
-    //       index = favorites.indexOf(id);
-    //   // return if target doesn't have an id (shouldn't happen)
-    //   if (!id) return;
-    //   // item is not favorite
-    //   if (index == -1) {
-    //     favorites.push(id);
-    //     item.className = 'favorite';
-    //   // item is already favorite
-    //   } else {
-    //     favorites.splice(index, 1);
-    //     item.className = '';
-    //   }
-    //   // store array in local storage
-    //   localStorage.setItem('favorites', JSON.stringify(favorites));
-    // });
-
-    // local storage stores strings so we use JSON to stringify for storage and parse to get out of storage
-
-
-
+yoSave.addEventListener('click', saveToLocalStorage);
 
 
 
