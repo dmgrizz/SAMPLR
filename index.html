@@ -504,53 +504,65 @@ function toggleNav() {
       }
 
   }
-
-$('.like-test').on('click', function(e){
-    save();
+//
+  //
+  $(".like").each(function(i, el) {
+      if (localStorage['like-test' + i] === 'fav') {
+        $(this).addClass('fav');
+      }else if(localStorage['like-test' + i] === 'fv-btn'){
+          $(this).addClass('fv-btn');
+      }
+        localStorage.getItem('like-this' + i);
     });
 
 
-
-
-
-function save(){
-
-    var new_likes = document.getElementsByClassName('favorite').value;
-
-
-      if(localStorage.getItem('likes') == null){
-        localStorage.setItem('likes', '[]');
-      }
-
-      var old_likes = JSON.parse(localStorage.getItem('likes'));
-      old_likes.push(new_likes);
-
-      localStorage.setItem('likes', JSON.stringify(old_likes));
-
-
-
-}
-
-
-$(document).ready(function(){
-
-  var liked = $('.like').addClass(localStorage.getItem('like-this')) || [];
-
-
-  $(".like").on("click", function(e) {
-     // for (var k = 1; k < i; k++) {
-    if($(this).hasClass('fv-btn')){
-      $(this).removeClass("fv-btn").addClass("fav");
-      localStorage.setItem('like-this', '[fav]');
+$(document).ready(function() {
+  $('.like').on('click', function() {
+    var $item = $(this).closest('.like');
+    var index = $('.like').index($item);
+    //$(".item").removeClass('favorites');
+    //localStorage.removeItem('background');
+    // $item.toggleClass('favorites');
+    if ($item.hasClass('fv-btn')) {
+      $item.removeClass("fv-btn").addClass("fav");
+      // console.log(index)
+      localStorage.setItem('like-this' + index, 'fav');
     }
-    else if($(this).hasClass('fav')){
-      $(this).removeClass("fav").addClass("fv-btn");
-      localStorage.setItem('like-this', '[fv-btn]');
+    else if ($item.hasClass('fav')) {
+      $item.removeClass('fav').addClass('fv-btn');
+      // console.log(index)
+      localStorage.setItem('like-this' + index, 'fv-btn');
     }
-    console.log(localStorage);
-  // }
+    else {
+
+      localStorage.removeItem('like-this' + index);
+    }
+
+  });
 });
-});
+
+
+// $(document).ready(function(){
+//
+//   var liked = $('.like').addClass(localStorage.getItem('like-this'));
+//   likeValue = JSON.parse(localStorage.getItem('likeValue')) || {}
+//
+//   $(".like").on("click", function(e) {
+//
+//     if($(this).hasClass('fv-btn')){
+//       $(this).removeClass("fv-btn").addClass("fav");
+//       localStorage.setItem('like-this', 'fav');
+//
+//     }
+//     else if($(this).hasClass('fav')){
+//       $(this).removeClass("fav").addClass("fv-btn");
+//       localStorage.setItem('like-this', 'fv-btn');
+//     }
+//     console.log(localStorage);
+//
+// });
+//   // }
+// });
 
 
 
