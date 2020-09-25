@@ -286,7 +286,7 @@
                               <div class="col-1 col-lg-1 col-md-1 col-sm-1  text-center text-middle pad-mid-text">E</div>
                               <div class="col-1 col-lg-1 col-md-auto col-sm-auto text-center text-middle pad-mid-text">132</div>
                               <div class="col-1 col-lg-1 col-md-1 side-btns">
-                                  <button class="fv-btn like"  type="button"> </button>
+                                  <button id="fb" class="fv-btn like"  type="button"> </button>
                                   <a href="sounds/RICKYXSAN_growl_one_shot_04_E.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                               </div>
                         </div>
@@ -373,6 +373,10 @@
     <button class="yo-save" type="button" name="button">Save</button>
   </div>
 
+  <div class="stupid">
+    <button class="like-test"type="button" name="button">FUCK</button>
+    <button class="like-test"type="button" name="button">FUCK</button>
+  </div>
 </section>
 <footer class="text-center">
   <h1 class="text-center footer-hd">Follow us on</h1>
@@ -501,48 +505,50 @@ function toggleNav() {
 
   }
 
-
-  // $(document).ready(function(){
-  // 	$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
-  // 		localStorage.setItem('activeTab', $(e.target).attr('href'));
-  // 	});
-  // 	var activeTab = localStorage.getItem('activeTab');
-  // 	if(activeTab){
-  // 		$('#myTab a[href="' + activeTab + '"]').tab('show');
-  // 	}
-  // });
-  $(document).ready(function(){
-
-      // rows.nextAll().addBack().addClass('favorite');
+$('.like-test').on('click', function(e){
+    save();
+    });
 
 
 
 
 
-      // var saved = JSON.parse(localStorage.getItem('switch-state'));
-      // console.log("if statement ran " + saved);
+function save(){
+
+    var new_likes = document.getElementsByClassName('favorite').value;
 
 
-  });
+      if(localStorage.getItem('likes') == null){
+        localStorage.setItem('likes', '[]');
+      }
+
+      var old_likes = JSON.parse(localStorage.getItem('likes'));
+      old_likes.push(new_likes);
+
+      localStorage.setItem('likes', JSON.stringify(old_likes));
+
+
+
+}
 
 
 $(document).ready(function(){
 
-  $('.like').addClass(localStorage.getItem('like-this'));
+  var liked = $('.like').addClass(localStorage.getItem('like-this')) || [];
 
 
-  $(".like").on("click", function() {
-     for (var k = 1; k < i; k++) {
+  $(".like").on("click", function(e) {
+     // for (var k = 1; k < i; k++) {
     if($(this).hasClass('fv-btn')){
       $(this).removeClass("fv-btn").addClass("fav");
-      localStorage.setItem('like-this', 'fav');
+      localStorage.setItem('like-this', '[fav]');
     }
     else if($(this).hasClass('fav')){
       $(this).removeClass("fav").addClass("fv-btn");
-      localStorage.setItem('like-this', 'fv-btn');
+      localStorage.setItem('like-this', '[fv-btn]');
     }
     console.log(localStorage);
-  }
+  // }
 });
 });
 
