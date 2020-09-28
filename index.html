@@ -286,7 +286,7 @@
                               <div class="col-1 col-lg-1 col-md-1 col-sm-1  text-center text-middle pad-mid-text">E</div>
                               <div class="col-1 col-lg-1 col-md-auto col-sm-auto text-center text-middle pad-mid-text">132</div>
                               <div class="col-1 col-lg-1 col-md-1 side-btns">
-                                  <button id="fb" class="fv-btn like"  type="button"> </button>
+                                  <button class="fv-btn like"  type="button"> </button>
                                   <a href="sounds/RICKYXSAN_growl_one_shot_04_E.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                               </div>
                         </div>
@@ -332,7 +332,7 @@
                             <div class="col-1 text-center text-middle pad-mid-text">C</div>
                             <div class="col-1 text-center text-middle pad-mid-text">148</div>
                             <div class="col-1 col-lg-1 col-md-1 side-btns">
-                                <button class="fv-btn"  type="button"> </button>
+                                <button class="like fv-btn"  type="button"> </button>
                                 <a href="sounds/CLF_ClosedHH_Trap.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                             </div>
                         </div>
@@ -355,7 +355,7 @@
                             <div class="col-1 text-center text-middle pad-mid-text">C</div>
                             <div class="col-1 text-center text-middle pad-mid-text">145</div>
                             <div class="col-1 col-lg-1 col-md-1 side-btns">
-                                <button class="fv-btn"  type="button"> </button>
+                                <button class="like fv-btn"  type="button"> </button>
                                 <a href="sounds/CLF_85_Drums_Golden.wav" download> <button class="dl-btn"  type="button" name="button"><i class="fas fa-arrow-circle-down fa-2x text-middle"></i></button> </a>
                             </div>
                         </div>
@@ -367,16 +367,7 @@
 
   </section>
 <section>
-  <div class="yo-fool">
-    <input class="yo-storage"type="text" name="" value="">
-    <p class="yo-text">Text</p>
-    <button class="yo-save" type="button" name="button">Save</button>
-  </div>
 
-  <div class="stupid">
-    <button class="like-test"type="button" name="button">FUCK</button>
-    <button class="like-test"type="button" name="button">FUCK</button>
-  </div>
 </section>
 <footer class="text-center">
   <h1 class="text-center footer-hd">Follow us on</h1>
@@ -505,113 +496,58 @@ function toggleNav() {
 
   }
 //
-  //
+
+
   $(".like").each(function(i, el) {
-      if (localStorage['like-test' + i] === 'fav') {
-        $(this).addClass('fav');
-      }else if(localStorage['like-test' + i] === 'fv-btn'){
-          $(this).addClass('fv-btn');
-      }
-        localStorage.getItem('like-this' + i);
+     if(localStorage['like-this' + i] == 'fav'){
+       $(this).addClass('fav');
+     }
+    else if (localStorage['like-this' + i] == 'fv-btn') {
+      $(this).addClass('fv-btn');
+    }
     });
 
 
 $(document).ready(function() {
+
   $('.like').on('click', function() {
     var $item = $(this).closest('.like');
     var index = $('.like').index($item);
-    //$(".item").removeClass('favorites');
-    //localStorage.removeItem('background');
-    // $item.toggleClass('favorites');
+
     if ($item.hasClass('fv-btn')) {
       $item.removeClass("fv-btn").addClass("fav");
-      // console.log(index)
+      console.log(index + "this shit running fv-btn")
       localStorage.setItem('like-this' + index, 'fav');
     }
     else if ($item.hasClass('fav')) {
       $item.removeClass('fav').addClass('fv-btn');
-      // console.log(index)
+      console.log(index + "this shit running fav")
       localStorage.setItem('like-this' + index, 'fv-btn');
-    }
-    else {
-
-      localStorage.removeItem('like-this' + index);
     }
 
   });
 });
 
-
-// $(document).ready(function(){
+// 
+// const yoInput = document.querySelector('.yo-storage');
+// const yoText = document.querySelector('.yo-text');
+// const yoSave = document.querySelector('.yo-save');
+// const yoStoredInput = localStorage.getItem('textinput');
 //
-//   var liked = $('.like').addClass(localStorage.getItem('like-this'));
-//   likeValue = JSON.parse(localStorage.getItem('likeValue')) || {}
 //
-//   $(".like").on("click", function(e) {
+// if(yoStoredInput) {
+//   yoText.textContent = yoStoredInput;
+// }
 //
-//     if($(this).hasClass('fv-btn')){
-//       $(this).removeClass("fv-btn").addClass("fav");
-//       localStorage.setItem('like-this', 'fav');
+// yoInput.addEventListener('input', letter => {
 //
-//     }
-//     else if($(this).hasClass('fav')){
-//       $(this).removeClass("fav").addClass("fv-btn");
-//       localStorage.setItem('like-this', 'fv-btn');
-//     }
-//     console.log(localStorage);
-//
+//   yoText.textContent = letter.target.value
 // });
-//   // }
-// });
-
-
-
-
-  // $(document).ready(function(){
-  //
-  //   if(typeof(Storage) !== "undefined" && JSON.stringify(localStorage.getItem('div-state')) && JSON.stringify(localStorage.getItem('like-state')) ){
-  //           var rows = $('.row-info');
-  //           rows.nextAll().addBack().css("background-color", "red");
-  //           var favorited = localStorage.getItem("div-state");
-  //           rows.removeClass('favorite');
-  //   }
-  //
-  //   $(".like").on("click", function(e) {
-  //     var like = $(this).toggleClass("fv-btn fav");
-  //     var self = $(this).parents('.row-info');
-  //     self.toggleClass("favorite");
-  //
-  //
-  //       localStorage.setItem('div-state', self.hasClass('favorite'));
-  //       localStorage.setItem('like-state', like.hasClass('fav'))
-  //
-  //       // localStorage.setItem('activeFav', JSON.stringify($(this).toggleClass("fv-btn fav")));
-  //       console.log("this shit was clicked");
-  //       console.log(localStorage);
-  //   });
-  //
-  // });
-
-
-const yoInput = document.querySelector('.yo-storage');
-const yoText = document.querySelector('.yo-text');
-const yoSave = document.querySelector('.yo-save');
-const yoStoredInput = localStorage.getItem('textinput');
-
-
-if(yoStoredInput) {
-  yoText.textContent = yoStoredInput;
-}
-
-yoInput.addEventListener('input', letter => {
-
-  yoText.textContent = letter.target.value
-});
-
-const saveToLocalStorage = () => {
-  localStorage.setItem('textinput', yoText.textContent);
-}
-yoSave.addEventListener('click', saveToLocalStorage);
+//
+// const saveToLocalStorage = () => {
+//   localStorage.setItem('textinput', yoText.textContent);
+// }
+// yoSave.addEventListener('click', saveToLocalStorage);
 
 
 
